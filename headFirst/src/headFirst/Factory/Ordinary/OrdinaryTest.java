@@ -12,11 +12,7 @@ public class OrdinaryTest {
 
 	public static void main(String[] args) {
 		PizzaStore nyPizzaStore = new NyPizzaStore();
-		Pizza nyPizza = nyPizzaStore.createPizza("nycheese");
-		nyPizza.prepare();
-		nyPizza.bake();
-		nyPizza.cut();
-		nyPizza.box();
+		Pizza nyPizza = nyPizzaStore.orderPizza("nycheese");
 	}
 	
 	
