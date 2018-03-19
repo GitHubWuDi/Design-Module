@@ -12,4 +12,8 @@ public interface Command {
 	 */
 	public void execute();
 	 
+	/**
+	 * 撤回命令
+	 */
+	public void undo();
 }
