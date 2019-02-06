@@ -17,5 +17,20 @@ public class TemplateTest {
            System.out.println("\n");		   
 		   Coffee coffee = new Coffee();
 		   coffee.prepareRecipe();
+		   ClassLoader classLoader = TemplateTest.class.getClassLoader();
+		   try {
+			   TemplateTest templateTest = (TemplateTest)Class.forName("headFirst.tempate.TemplateTest").newInstance();
+			   templateTest.printInfo();
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		   System.out.println("TemplateTest ClassLoader is "+classLoader);
 	}
+	   
+	   
+	   public void printInfo(){
+		   System.out.println("test is best");
+	   }
+	   
 }
